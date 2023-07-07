@@ -1,0 +1,10 @@
+configuration{
+	modes: "drun";
+	display-drun: "Apps: ";
+	drun-display-format: "{name}";
+}
+
+
+@theme "myTheme"
+
+/* @theme "/usr/share/rofi/themes/Arc-Dark.rasi" */
