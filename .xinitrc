@@ -49,8 +49,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap us &
-~/.screenlayout/display.sh 
+#~/.screenlayout/display.sh set up manually
 xsetroot -cursor_name left_ptr 
-sh ~/.fehbg
+#sh ~/.fehbg set up manually
 picom -f &
 exec bspwm
