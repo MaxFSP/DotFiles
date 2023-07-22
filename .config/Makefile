@@ -28,13 +28,14 @@ install:
 	@cp nvim ../../.config/nvim -r
 	@cd ..
 	@cp ../.xinitrc ~/.xinitrc
-	@chmod +x .xinitrc
+	@chmod +x ~/.xinitrc
 	@sudo systemctl enable ly.service
 	@echo "Should be done really, make sure to do the arandr and save the layout in .screenlayout/display.sh"
 	@echo "and add the background with feh --bg-scale ....  and then do chmod +x to it so it can be launched"
-	@cp ../zshrc ~/.zshrc
+	@cp ../.zshrc ~/.zshrc
 	@chsh -s /bin/zsh
 	@echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc	
+	@source ~/.zshrc
 	@sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	@git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
