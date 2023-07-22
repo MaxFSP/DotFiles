@@ -111,3 +111,4 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias config='/usr/bin/git --git-dir=/home/max/.cfg/ --work-tree=/home/max'
 alias config='/usr/bin/git --git-dir=/home/max/.cfg/ --work-tree=/home/max'
+source /usr/share/nvm/init-nvm.sh

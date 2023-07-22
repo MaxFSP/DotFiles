@@ -15,10 +15,6 @@ install:
 	@rustup default stable
 	@mkdir ~/Downloads
 	@git -C ~/Downloads clone https://aur.archlinux.org/paru.git
-	@sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	@git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-	@git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	@cd ~/Downloads/paru; makepkg -si
 	@paru -S zscroll-git neovim-git nvim-packer-git nvm
 	@echo "Configuring now your custom dotfiles!!! ....."
@@ -39,6 +35,10 @@ install:
 	@cp ../zshrc ~/.zshrc
 	@chsh -s /bin/zsh
 	@echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc	
+	@sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	@git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	@git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions	
 	@source ~/.zshrc
 	@nvm install stable
 	@nvm use stable
