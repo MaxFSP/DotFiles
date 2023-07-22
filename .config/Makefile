@@ -15,6 +15,10 @@ install:
 	@rustup default stable
 	@mkdir ~/Downloads
 	@git -C ~/Downloads clone https://aur.archlinux.org/paru.git
+	@sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	@git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+	@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	@git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 	@cd ~/Downloads/paru; makepkg -si
 	@paru -S zscroll-git neovim-git
 	
@@ -32,6 +36,7 @@ install:
 	@sudo systemctl enable ly.service
 	@echo "Should be done really, make sure to do the arandr and save the layout in .screenlayout/display.sh"
 	@echo "and add the background with feh --bg-scale ....  and then do chmod +x to it so it can be launched"
+	@cp ../zshrc ~/.zshrc
 	@chsh -s /bin/zsh
 	@echo "Test done"
 
