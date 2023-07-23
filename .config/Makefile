@@ -33,18 +33,18 @@ install:
 	@echo "Should be done really, make sure to do the arandr and save the layout in .screenlayout/display.sh"
 	@echo "and add the background with feh --bg-scale ....  and then do chmod +x to it so it can be launched"
 	@chsh -s /bin/zsh
-	@echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc	
-#@source ~/.zshrc
+	@reboot
 
+#@echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc	
+#@source ~/.zshrc
 #@cp ../.zshrc ~/.zshrc
 #@sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #@git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 #@git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 #@git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions	
-	@nvm install stable
-	@nvm use stable
-	@echo "Test done"
-	@reboot
+#@nvm install stable
+#@nvm use stable
+#@echo "Test done"
 
 
 .DEFAULT_GOAL := show_commands
