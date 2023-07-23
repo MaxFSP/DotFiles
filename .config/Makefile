@@ -34,7 +34,7 @@ install:
 	@echo "and add the background with feh --bg-scale ....  and then do chmod +x to it so it can be launched"
 	@chsh -s /bin/zsh
 	@echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc	
-	@source ~/.zshrc
+#@source ~/.zshrc
 
 #@cp ../.zshrc ~/.zshrc
 #@sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
