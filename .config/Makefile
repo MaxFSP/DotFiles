@@ -44,5 +44,7 @@ install:
 	@nvm install stable
 	@nvm use stable
 	@echo "Test done"
+	@reboot
+
 
 .DEFAULT_GOAL := show_commands
